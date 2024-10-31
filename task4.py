@@ -3,15 +3,7 @@
 # 6782 -> 23
 # 0,56 -> 11
 
-num = float(input())
-num1 = num * 100
-res = 0
-while num1 != 0:
-    res = res + num1 % 10
-    num1 = num1 // 10
-print (round(res, 0))
-
-# P.S. Хотел попробовать решить вот таким образом, но с десятичным не отработало....
-# num = float(input())
-# a = sum(map(int, str(num)))
-# print (a)
+number = input("Введите вещественное число: ")
+number = number.replace(',', '')
+sum_of_digits = sum(int(digit) for digit in number)
+print("Сумма цифр числа:", sum_of_digits)
